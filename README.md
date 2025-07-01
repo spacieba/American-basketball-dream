@@ -1,2 +1,392 @@
 # equipe-3c3
 pour repartir les eleves chaque soir
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équilibreur d'équipes 3c3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .player-input {
+            display: grid;
+            grid-template-columns: 2fr 1fr auto;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        
+        button {
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #5a6fd8;
+        }
+        
+        .remove-btn {
+            background: #e74c3c;
+            padding: 8px 12px;
+            font-size: 12px;
+        }
+        
+        .remove-btn:hover {
+            background: #c0392b;
+        }
+        
+        .teams-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .team {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+        
+        .team:nth-child(1) { border-left-color: #e74c3c; }
+        .team:nth-child(2) { border-left-color: #3498db; }
+        .team:nth-child(3) { border-left-color: #2ecc71; }
+        .team:nth-child(4) { border-left-color: #f39c12; }
+        .team:nth-child(5) { border-left-color: #9b59b6; }
+        .team:nth-child(6) { border-left-color: #1abc9c; }
+        .team:nth-child(7) { border-left-color: #34495e; }
+        .team:nth-child(8) { border-left-color: #e67e22; }
+        
+        .team h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .player-item {
+            background: white;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .player-name {
+            font-weight: bold;
+        }
+        
+        .player-points {
+            background: #667eea;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        
+        .team-total {
+            font-weight: bold;
+            color: #333;
+            border-top: 2px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            align-items: center;
+        }
+        
+        .nb-teams {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        select {
+            padding: 8px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .stats {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Équilibreur d'équipes 3c3 NCAA</h1>
+        
+        <div class="input-section">
+            <h3>Ajouter les joueurs et leurs points actuels</h3>
+            <div id="players-list">
+                <div class="player-input">
+                    <input type="text" placeholder="Nom du joueur" class="player-name-input">
+                    <input type="number" placeholder="Points" class="player-points-input" min="0">
+                    <button class="remove-btn" onclick="removePlayer(this)">✖</button>
+                </div>
+            </div>
+            <button onclick="addPlayer()">+ Ajouter un joueur</button>
+        </div>
+        
+        <div class="controls">
+            <div class="nb-teams">
+                <label>Nombre d'équipes :</label>
+                <select id="team-count">
+                    <option value="2">2 équipes</option>
+                    <option value="3">3 équipes</option>
+                    <option value="4" selected>4 équipes</option>
+                    <option value="5">5 équipes</option>
+                    <option value="6">6 équipes</option>
+                    <option value="7">7 équipes</option>
+                    <option value="8">8 équipes</option>
+                </select>
+            </div>
+            <button onclick="generateTeams()">🎲 Générer les équipes équilibrées</button>
+            <button onclick="randomizeTeams()">🔀 Mélange aléatoire</button>
+            <button onclick="exportTeams()" style="background: #2ecc71;">📋 Copier les équipes</button>
+        </div>
+        
+        <div class="stats" id="stats" style="display: none;">
+            <strong>Écart entre l'équipe la plus forte et la plus faible : <span id="point-difference">0</span> points</strong>
+        </div>
+        
+        <div class="teams-container" id="teams-container">
+        </div>
+    </div>
+
+    <script>
+        let players = [];
+        
+        function addPlayer() {
+            const container = document.getElementById('players-list');
+            const div = document.createElement('div');
+            div.className = 'player-input';
+            div.innerHTML = `
+                <input type="text" placeholder="Nom du joueur" class="player-name-input">
+                <input type="number" placeholder="Points" class="player-points-input" min="0">
+                <button class="remove-btn" onclick="removePlayer(this)">✖</button>
+            `;
+            container.appendChild(div);
+        }
+        
+        function removePlayer(button) {
+            button.parentElement.remove();
+        }
+        
+        function collectPlayers() {
+            players = [];
+            const inputs = document.querySelectorAll('.player-input');
+            inputs.forEach(input => {
+                const name = input.querySelector('.player-name-input').value.trim();
+                const points = parseInt(input.querySelector('.player-points-input').value) || 0;
+                if (name) {
+                    players.push({ name, points });
+                }
+            });
+            return players;
+        }
+        
+        function generateTeams() {
+            const playersList = collectPlayers();
+            if (playersList.length === 0) {
+                alert('Veuillez ajouter au moins un joueur !');
+                return;
+            }
+            
+            const teamCount = parseInt(document.getElementById('team-count').value);
+            
+            // Trier les joueurs par points (décroissant)
+            playersList.sort((a, b) => b.points - a.points);
+            
+            // Initialiser les équipes
+            const teams = Array.from({ length: teamCount }, () => ({ players: [], total: 0 }));
+            
+            // Répartition "Snake Draft"
+            for (let i = 0; i < playersList.length; i++) {
+                const roundNumber = Math.floor(i / teamCount);
+                let teamIndex;
+                
+                if (roundNumber % 2 === 0) {
+                    // Tour pair : 0, 1, 2, 3...
+                    teamIndex = i % teamCount;
+                } else {
+                    // Tour impair : 3, 2, 1, 0...
+                    teamIndex = teamCount - 1 - (i % teamCount);
+                }
+                
+                teams[teamIndex].players.push(playersList[i]);
+                teams[teamIndex].total += playersList[i].points;
+            }
+            
+            displayTeams(teams);
+        }
+        
+        function randomizeTeams() {
+            const playersList = collectPlayers();
+            if (playersList.length === 0) {
+                alert('Veuillez ajouter au moins un joueur !');
+                return;
+            }
+            
+            const teamCount = parseInt(document.getElementById('team-count').value);
+            
+            // Mélanger aléatoirement
+            for (let i = playersList.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [playersList[i], playersList[j]] = [playersList[j], playersList[i]];
+            }
+            
+            // Répartir équitablement
+            const teams = Array.from({ length: teamCount }, () => ({ players: [], total: 0 }));
+            
+            playersList.forEach((player, index) => {
+                const teamIndex = index % teamCount;
+                teams[teamIndex].players.push(player);
+                teams[teamIndex].total += player.points;
+            });
+            
+            displayTeams(teams);
+        }
+        
+        function displayTeams(teams) {
+            const container = document.getElementById('teams-container');
+            container.innerHTML = '';
+            
+            let minTotal = Math.min(...teams.map(t => t.total));
+            let maxTotal = Math.max(...teams.map(t => t.total));
+            
+            teams.forEach((team, index) => {
+                const teamDiv = document.createElement('div');
+                teamDiv.className = 'team';
+                
+                const playersHtml = team.players.map(player => `
+                    <div class="player-item">
+                        <span class="player-name">${player.name}</span>
+                        <span class="player-points">${player.points}pts</span>
+                    </div>
+                `).join('');
+                
+                teamDiv.innerHTML = `
+                    <h3>Équipe ${index + 1}</h3>
+                    ${playersHtml}
+                    <div class="team-total">Total : ${team.total} points</div>
+                `;
+                
+                container.appendChild(teamDiv);
+            });
+            
+            // Afficher les statistiques
+            document.getElementById('stats').style.display = 'block';
+            document.getElementById('point-difference').textContent = maxTotal - minTotal;
+        }
+        
+        // Sauvegarder et charger les données
+        function saveData() {
+            const players = collectPlayers();
+            localStorage.setItem('players-3c3', JSON.stringify(players));
+        }
+        
+        function loadData() {
+            const saved = localStorage.getItem('players-3c3');
+            if (saved) {
+                const players = JSON.parse(saved);
+                // Effacer les champs existants
+                document.getElementById('players-list').innerHTML = '';
+                
+                players.forEach((player, index) => {
+                    addPlayer();
+                    const inputs = document.querySelectorAll('.player-input');
+                    const lastInput = inputs[inputs.length - 1];
+                    lastInput.querySelector('.player-name-input').value = player.name;
+                    lastInput.querySelector('.player-points-input').value = player.points;
+                });
+            }
+        }
+        
+        // Sauvegarder automatiquement à chaque changement
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('player-name-input') || 
+                e.target.classList.contains('player-points-input')) {
+                setTimeout(saveData, 500); // Délai pour éviter trop de sauvegardes
+            }
+        });
+        
+        // Ajouter quelques joueurs d'exemple au chargement (si pas de données sauvées)
+        window.onload = function() {
+            const saved = localStorage.getItem('players-3c3');
+            if (saved) {
+                loadData();
+            } else {
+                const examplePlayers = [
+                    ['Mathis', 11], ['Nina.T', 9], ['Ivanna', 9], ['Lousiah', 9],
+                    ['Ethaniel', 8], ['Awen', 8], ['Nohan', 7], ['Lilian', 7]
+                ];
+                
+                examplePlayers.forEach(([name, points], index) => {
+                    if (index > 0) addPlayer();
+                    const inputs = document.querySelectorAll('.player-input');
+                    const lastInput = inputs[inputs.length - 1];
+                    lastInput.querySelector('.player-name-input').value = name;
+                    lastInput.querySelector('.player-points-input').value = points;
+                });
+            }
+        };
+    </script>
+</body>
+</html>
