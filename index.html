@@ -250,6 +250,28 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
+        .donate-button {
+            background: #28a745;
+            color: white;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 10px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .donate-button:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.6);
+        }
+
         .contact {
             background: #2c3e50;
             color: white;
@@ -311,8 +333,8 @@
     <div class="hero">
         <div class="container">
             <h1 class="fade-in">American Basketball Dream 2026</h1>
-            <p class="fade-in">Un voyage extraordinaire pour 20 élèves de la section sportive basket du collège Gérard Philipe</p>
-            <div class="dates fade-in">📅 10-16 mars 2026 • New York City</div>
+            <p class="fade-in">Un voyage extraordinaire pour 21 élèves de la section sportive basket du collège Gérard Philipe</p>
+            <div class="dates fade-in">📅 9-15 mars 2026 • New York City</div>
         </div>
     </div>
 
@@ -322,7 +344,7 @@
                 <h2>Le Projet en Chiffres</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <span class="stat-number">20</span>
+                        <span class="stat-number">21</span>
                         <div class="stat-label">Élèves participants<br>(4ème et 3ème)</div>
                     </div>
                     <div class="stat-card">
@@ -330,12 +352,16 @@
                         <div class="stat-label">Jours à New York<br>6 nuits</div>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">3</span>
-                        <div class="stat-label">Échanges déjà réalisés<br>(2014, 2019, 2023)</div>
+                        <span class="stat-number">1800</span>
+                        <div class="stat-label">€ Prix réel<br>du voyage</div>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">39</span>
-                        <div class="stat-label">Élèves total dans<br>la section basket</div>
+                        <span class="stat-number">600</span>
+                        <div class="stat-label">€ Participation<br>demandée aux familles</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100</span>
+                        <div class="stat-label">% d'élèves qui<br>aimeraient être à leur place</div>
                     </div>
                 </div>
             </div>
@@ -354,7 +380,7 @@
                         <div class="objectives-grid">
                             <div class="objective-card">
                                 <h3>🎯 Excellence Sportive</h3>
-                                <p>Participation aux championnats UNSS départementaux et académiques</p>
+                                <p>Seul collège du département à participer au championnat UNSS "Excellence". Promotion des valeurs essentielles : travail, solidarité, humilité.</p>
                             </div>
                             <div class="objective-card">
                                 <h3>📚 Réussite Scolaire</h3>
@@ -365,8 +391,8 @@
                                 <p>Promouvoir la pratique sportive féminine dans des populations souvent exclues</p>
                             </div>
                             <div class="objective-card">
-                                <h3>🌟 Estime de Soi</h3>
-                                <p>Développer la confiance et l'autonomie des élèves</p>
+                                <h3>🌟 Confiance et Autonomie</h3>
+                                <p>Développement de l'estime de soi et de l'autonomie par des actions où les élèves encadrent des élèves de primaire sur des ateliers basket</p>
                             </div>
                         </div>
                     </div>
@@ -377,7 +403,7 @@
                 <h2>Notre Équipe</h2>
                 <div style="text-align: center; margin-bottom: 40px;">
                     <img src="./images/equipe-basket.jpg" alt="Équipe de basket du collège" style="max-width: 100%; height: 900px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <p style="margin-top: 20px; font-style: italic; color: #666;">Les 20 élèves de 4ème et 3ème de la section sportive basket</p>
+                    <p style="margin-top: 20px; font-style: italic; color: #666;">Les 21 élèves de 4ème et 3ème de la section sportive basket</p>
                 </div>
             </div>
 
@@ -428,6 +454,14 @@
                         </div>
                     </div>
                     <div class="activity-card">
+                        <div class="activity-icon">🏆</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Match NCAA</div>
+                            <p>Un match de la conférence BIG12 lors de la March Madness. Vivre l'authenticité d'un match universitaire</p>
+                            <img src="./images/ncaa.jpg" alt="Match NCAA" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
+                        </div>
+                    </div>
+                    <div class="activity-card">
                         <div class="activity-icon">🗽</div>
                         <div class="activity-content">
                             <div class="activity-title">Découverte Culturelle</div>
@@ -439,14 +473,8 @@
                         <div class="activity-icon">🌍</div>
                         <div class="activity-content">
                             <div class="activity-title">Projet Migration</div>
-                            <p>Étude de la dimension multiculturelle de New York et des enjeux migratoires</p>
-                        </div>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🤝</div>
-                        <div class="activity-content">
-                            <div class="activity-title">Rencontres Familiales</div>
-                            <p>Échanges avec les familles d'accueil et partage de repas</p>
+                            <p>Musée Ellis Island et entretiens avec les jeunes collégiens américains sur l'histoire de l'immigration</p>
+                            <img src="./images/ellis-island.jpg" alt="Ellis Island" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
                         </div>
                     </div>
                 </div>
@@ -456,35 +484,39 @@
                 <div class="budget">
                     <div class="container">
                         <h2 style="color: white;">Budget du Projet</h2>
-                        <div class="budget-highlight">35 454 €</div>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px;">Coût total pour 20 élèves + 3 accompagnateurs</p>
+                        <div class="budget-highlight">1 800 €</div>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px;">Coût par élève</p>
                         
                         <div class="budget-details">
                             <div class="budget-item">
-                                <h4>Transport</h4>
-                                <p>14 600 €</p>
-                                <small>Vol + navette + métro</small>
+                                <h4>Billet d'avion</h4>
+                                <p>750 €</p>
                             </div>
                             <div class="budget-item">
                                 <h4>Hébergement</h4>
-                                <p>10 000 €</p>
-                                <small>7 jours / 6 nuits</small>
+                                <p>400 €</p>
                             </div>
                             <div class="budget-item">
-                                <h4>Match NBA</h4>
-                                <p>4 140 €</p>
-                                <small>Billets pour 23 personnes</small>
+                                <h4>Matchs NBA-NCAA</h4>
+                                <p>200 €</p>
                             </div>
                             <div class="budget-item">
-                                <h4>Autres frais</h4>
-                                <p>6 714 €</p>
-                                <small>Assurances, repas, visites</small>
+                                <h4>Visites culturelles</h4>
+                                <p>100 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Transports + transferts</h4>
+                                <p>80 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Frais voyagiste</h4>
+                                <p>270 €</p>
                             </div>
                         </div>
                         
                         <p style="font-size: 1.1rem; margin-top: 30px;">
                             <strong>Participation des familles : 600 € par élève</strong><br>
-                            <em>Soit 12 000 € sur les 35 454 € nécessaires</em>
+                            <em>Soit 12 600 € sur les 37 800 € nécessaires</em>
                         </p>
                     </div>
                 </div>
@@ -494,8 +526,11 @@
                 <h2>Financement Participatif</h2>
                 <div class="objectives">
                     <div class="container">
+                        <p style="text-align: center; font-size: 1.3rem; margin-bottom: 20px; color: #FF6B35; font-weight: bold;">
+                            Nous espérons récolter plus de 24 000 € pour rendre ce rêve possible
+                        </p>
                         <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #666;">
-                            <strong>23 454 € à financer</strong> grâce à vos dons et nos actions d'autofinancement
+                            <strong>25 200 € à financer</strong> grâce à vos dons et nos actions d'autofinancement
                         </p>
                         <div class="objectives-grid">
                             <div class="objective-card">
@@ -508,11 +543,14 @@
                             </div>
                             <div class="objective-card">
                                 <h3>🏛️ Subventions Publiques</h3>
-                                <p>Ville, département, politique de la ville, FSE</p>
+                                <p>La ville de Fontaine et le département de l'Isère ont toujours été des soutiens précieux pour ces projets ambitieux. FSE, politique de la ville.</p>
                             </div>
-                            <div class="objective-card">
+                            <div class="objective-card" style="border-left: 5px solid #28a745; background: linear-gradient(135deg, #f8f9fa, #e8f5e8);">
                                 <h3>❤️ Dons Particuliers</h3>
-                                <p>Financement participatif et soutien de la communauté</p>
+                                <p>Chaque don compte pour réaliser ce rêve américain !</p>
+                                <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button" style="margin-top: 15px; padding: 15px 30px; font-size: 1.1rem;">
+                                    💖 Faire un don maintenant
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -523,12 +561,12 @@
 
     <div class="cta">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 20px;">Soutenez le Rêve de nos 20 Basketteurs !</h2>
+            <h2 style="color: white; margin-bottom: 20px;">Soutenez le Rêve de nos 21 Basketteurs !</h2>
             <p style="font-size: 1.2rem; margin-bottom: 30px;">
                 Chaque euro compte pour réaliser ce projet exceptionnel d'ouverture culturelle et sportive
             </p>
             <a href="mailto:dbouillac@gmail.com" class="cta-button">💌 Nous Contacter</a>
-            <a href="#" class="cta-button">💰 Faire un Don</a>
+            <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button">💰 Faire un Don</a>
             <a href="#" class="cta-button">🤝 Devenir Partenaire</a>
         </div>
     </div>
