@@ -41,6 +41,10 @@
             top: 20px;
             right: 20px;
             z-index: 10;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .header-donate-btn {
@@ -62,6 +66,39 @@
             background: #218838;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+        }
+
+        .header-entreprise-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 3px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .header-entreprise-btn:hover {
+            background: linear-gradient(135deg, #5568d3, #6a3d99);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .hero-header {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .header-donate-btn, .header-entreprise-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
         }
 
         .hero::before {
@@ -370,6 +407,7 @@
             font-weight: bold;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: white;
         }
 
         .progress-subtitle {
@@ -541,6 +579,9 @@
 <body>
     <div class="hero">
         <div class="hero-header">
+            <a href="mecenat.html" class="header-entreprise-btn">
+                🏢 Vous êtes une entreprise ? Parrainez notre voyage
+            </a>
             <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="header-donate-btn">
                 💝 Faire un don
             </a>
@@ -813,8 +854,8 @@
                                 <h3>🏢 Entreprises - Mécénat</h3>
                                 <p style="margin-bottom: 20px;">Devenez partenaire de notre projet et bénéficiez d'avantages fiscaux.</p>
                                 <p style="margin-bottom: 20px;"><strong>Réduction d'impôt de 60%</strong> sur le montant de votre don</p>
-                                <a href="mecenat.html" class="cta-button" style="margin-top: 15px; padding: 15px 30px;">
-                                    📄 Découvrir les avantages du mécénat
+                                <a href="mecenat.html" class="mecenat-button">
+                                    🏆 Découvrir les avantages du mécénat
                                 </a>
                             </div>
                             
