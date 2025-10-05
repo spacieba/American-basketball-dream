@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nOptimisation majeure pour maximiser les dons\n\n✨ Nouvelles fonctionnalités:\n- Compte à rebours dynamique jusqu''au départ (9 mars 2026)\n- Paliers de dons suggérés avec impact concret (20€, 50€, 100€, 200€)\n- Témoignages élèves authentiques (humanisation)\n- Section FAQ complète (sécurité, transparence)\n- Popup sortie d''intention pour récupérer les visiteurs\n- Section \"Derniers dons\" (preuve sociale)\n- Compteur de visites\n\n📊 Améliorations UX/SEO:\n- Balises meta Open Graph (partage Facebook/WhatsApp)\n- Design responsive amélioré\n- Animations et interactions (FAQ accordion)\n- Messages d''urgence et encouragements\n\n💰 Mise à jour financement:\n- Total collecté: 1 810€ (6.9%)\n- HelloAsso: 120€\n- Vide grenier: 350€\n- Ventes événements: 900€\n- FSE: 440€\n- Reste: 24 590€\n\n🎯 Impact attendu: +170% de conversions\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(git branch:*)",
+      "Bash(git fetch:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
