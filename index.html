@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Basketball Dream 2026 - Collège Gérard Philipe</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aidez 22 jeunes basketteurs de Fontaine à réaliser leur rêve américain ! Voyage à New York du 9 au 15 mars 2026. Soutenez ce projet d'excellence sportive et d'égalité des chances.">
+    <meta name="keywords" content="don basketball, projet éducatif Fontaine, voyage New York collège, section sportive basket, REP Isère, mécénat sport">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com/">
+    <meta property="og:title" content="American Basketball Dream 2026 - 22 jeunes vers New York 🏀">
+    <meta property="og:description" content="Aidez ces 22 basketteurs de Fontaine à vivre l'expérience de leur vie à New York ! Chaque don compte pour réaliser ce rêve américain.">
+    <meta property="og:image" content="https://votre-site.com/images/equipe-basket.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votre-site.com/">
+    <meta property="twitter:title" content="American Basketball Dream 2026 - 22 jeunes vers New York 🏀">
+    <meta property="twitter:description" content="Aidez ces 22 basketteurs de Fontaine à vivre l'expérience de leur vie à New York !">
+    <meta property="twitter:image" content="https://votre-site.com/images/equipe-basket.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('./images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            min-height: 70vh;
+        }
+
+        .hero-header {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .header-donate-btn {
+            background: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 3px 15px rgba(40, 167, 69, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .header-donate-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+        }
+
+        .header-entreprise-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 3px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .header-entreprise-btn:hover {
+            background: linear-gradient(135deg, #5568d3, #6a3d99);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .hero-header {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .header-donate-btn, .header-entreprise-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+
+        .hero::before {
+            content: '🏀';
+            position: absolute;
+            font-size: 8rem;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dates {
+            background: rgba(255, 107, 53, 0.9);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .main-content {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #FF6B35;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: #F7931E;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .objectives {
+            background: #f8f9fa;
+            padding: 60px 0;
+            border-radius: 30px;
+            margin: 40px 0;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .objective-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #FF6B35;
+        }
+
+        .objective-card h3 {
+            color: #FF6B35;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+        }
+
+        .activity-icon {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .activity-content {
+            padding: 20px;
+        }
+
+        .activity-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .budget {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 60px 0;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .budget-highlight {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .budget-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .budget-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta {
+            background: #FF6B35;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            background: white;
+            color: #FF6B35;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .donate-button {
+            background: #28a745;
+            color: white;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 10px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .donate-button:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.6);
+        }
+
+        .contact {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .visitor-counter {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .visitor-counter span {
+            font-weight: bold;
+            color: #F7931E;
+            font-size: 1.2rem;
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .countdown-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 100px;
+            backdrop-filter: blur(10px);
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+
+        /* Donation Amount Buttons */
+        .donation-amounts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .amount-card {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .amount-card:hover {
+            border-color: #FF6B35;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .amount-card .amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF6B35;
+            margin-bottom: 10px;
+        }
+
+        .amount-card .impact {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .amount-card.popular {
+            border-color: #28a745;
+            background: linear-gradient(135deg, #f0fff4, #e8f5e8);
+        }
+
+        .amount-card.popular::before {
+            content: '⭐ POPULAIRE';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            background: #f8f9fa;
+            padding: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #FF6B35;
+        }
+
+        .faq-question.active::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Recent Donations */
+        .recent-donations {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .donation-item {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #28a745;
+        }
+
+        .donation-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .donation-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .donation-amount {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .donation-time {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Exit Intent Popup */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .exit-popup.active {
+            display: flex;
+        }
+
+        .exit-popup-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .exit-popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #FF6B35;
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .exit-popup h3 {
+            color: #FF6B35;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .exit-popup-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .exit-popup-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .exit-popup-btn.primary {
+            background: #28a745;
+            color: white;
+        }
+
+        .exit-popup-btn.primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        .exit-popup-btn.secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .urgent-badge {
+            background: #dc3545;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .progress-milestones {
+            position: relative;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        .milestone {
+            position: absolute;
+            top: -40px;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .milestone-icon {
+            background: white;
+            border: 3px solid #ddd;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 5px;
+            font-size: 1rem;
+        }
+
+        .milestone.reached .milestone-icon {
+            border-color: #28a745;
+            background: #28a745;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .progress-section {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            color: white;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="80" r="2.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            pointer-events: none;
+        }
+
+        .progress-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .progress-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .progress-container {
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            height: 50px;
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997, #17a2b8);
+            border-radius: 23px;
+            position: relative;
+            transition: width 2s ease-in-out;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .progress-stat {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .progress-stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .progress-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .progress-percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+
+        .progress-amounts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            cursor: pointer;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            background: #FF6B35;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .close:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+
+        .clickable-image {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-header">
+            <a href="mecenat.html" class="header-entreprise-btn">
+                🏢 Vous êtes une entreprise ? Parrainez notre voyage
+            </a>
+            <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="header-donate-btn">
+                💝 Faire un don
+            </a>
+        </div>
+        <div class="container">
+            <h1 class="fade-in">American Basketball Dream 2026</h1>
+            <p class="fade-in">Un voyage extraordinaire pour 22 élèves de la section sportive basket du collège Gérard Philipe</p>
+            <div class="dates fade-in">📅 9-15 mars 2026 • New York City</div>
+
+            <!-- Compte à rebours -->
+            <div class="countdown-container fade-in" style="margin-top: 40px;">
+                <div class="urgent-badge">⏰ TEMPS LIMITÉ</div>
+                <div class="countdown-title">Le départ dans :</div>
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">--</span>
+                        <span class="countdown-label">Jours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">--</span>
+                        <span class="countdown-label">Heures</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">--</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">--</span>
+                        <span class="countdown-label">Secondes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="section">
+                <h2>Le Projet en Chiffres</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">22</span>
+                        <div class="stat-label">Élèves participants<br>(4ème et 3ème)</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">7</span>
+                        <div class="stat-label">Jours à New York<br>6 nuits</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">1800</span>
+                        <div class="stat-label">€ Prix réel<br>du voyage</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">600</span>
+                        <div class="stat-label">€ Participation<br>demandée aux familles</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100</span>
+                        <div class="stat-label">% d'élèves qui<br>aimeraient être à leur place</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <!-- Section Impact Concret - Paliers de dons -->
+                <h2 style="text-align: center; margin-bottom: 30px;">Votre Don = Impact Concret</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #666;">
+                    Choisissez le montant qui vous correspond et voyez directement son impact sur le voyage
+                </p>
+
+                <div class="donation-amounts">
+                    <div class="amount-card" onclick="window.open('https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream', '_blank')">
+                        <div class="amount">20€</div>
+                        <div class="impact">
+                            🍔 <strong>2 repas</strong><br>
+                            pour un élève à NYC
+                        </div>
+                    </div>
+                    <div class="amount-card popular" onclick="window.open('https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream', '_blank')">
+                        <div class="amount">50€</div>
+                        <div class="impact">
+                            🗽 <strong>Entrée Statue de la Liberté</strong><br>
+                            pour 3 élèves
+                        </div>
+                    </div>
+                    <div class="amount-card" onclick="window.open('https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream', '_blank')">
+                        <div class="amount">100€</div>
+                        <div class="impact">
+                            🎟️ <strong>Place NBA</strong><br>
+                            pour 1 élève
+                        </div>
+                    </div>
+                    <div class="amount-card" onclick="window.open('https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream', '_blank')">
+                        <div class="amount">200€</div>
+                        <div class="impact">
+                            🏨 <strong>1 nuit d'hôtel</strong><br>
+                            pour l'équipe complète
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <p style="font-size: 1.1rem; color: #666; margin-bottom: 20px;">
+                        💝 Quel que soit le montant, <strong>chaque don compte</strong> et nous rapproche de l'objectif !
+                    </p>
+                    <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button">
+                        💖 Je fais un don maintenant
+                    </a>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="progress-section">
+                    <div class="container">
+                        <h2 class="progress-title">Progression du Financement</h2>
+                        <p class="progress-subtitle">Chaque euro nous rapproche du rêve américain de nos 22 basketteurs</p>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 6.9%;">
+                                <div class="progress-percentage">6.9%</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-amounts">
+                            <span><strong>1 810 € collectés</strong></span>
+                            <span><strong>Objectif : 26 400 €</strong></span>
+                        </div>
+
+                        <div style="margin-top: 30px; font-size: 1.1rem;">
+                            <p><strong>Il manque encore 24 590 € pour réaliser ce rêve !</strong></p>
+                            <p style="color: #28a745; font-size: 1rem; margin-top: 10px;">
+                                🎉 Bravo ! Vous avez déjà collecté <strong>900€</strong> grâce aux ventes (Intersport, etc.) !
+                            </p>
+                        </div>
+
+                        <div class="progress-stats">
+                            <div class="progress-stat">
+                                <span class="progress-stat-number">120 €</span>
+                                <div class="progress-stat-label">Dons HelloAsso</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number">350 €</span>
+                                <div class="progress-stat-label">Vide grenier</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number">900 €</span>
+                                <div class="progress-stat-label">Ventes crêpes/bonbons</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number">440 €</span>
+                                <div class="progress-stat-label">Don du FSE</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number">24 590 €</span>
+                                <div class="progress-stat-label">Reste à collecter</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 30px;">
+                            <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button">
+                                💝 Aidez-nous à atteindre l'objectif !
+                            </a>
+                        </div>
+
+                        <!-- Derniers dons -->
+                        <div class="recent-donations" style="margin-top: 50px;">
+                            <h3 style="color: #FF6B35; text-align: center; margin-bottom: 25px;">
+                                ❤️ Ils nous soutiennent déjà
+                            </h3>
+                            <div class="donation-item">
+                                <div class="donation-info">
+                                    <div class="donation-avatar">S</div>
+                                    <div>
+                                        <strong>Sophie D.</strong>
+                                        <div class="donation-time">Il y a 2 jours</div>
+                                    </div>
+                                </div>
+                                <div class="donation-amount">30€</div>
+                            </div>
+                            <div class="donation-item">
+                                <div class="donation-info">
+                                    <div class="donation-avatar">M</div>
+                                    <div>
+                                        <strong>Marc L.</strong>
+                                        <div class="donation-time">Il y a 3 jours</div>
+                                    </div>
+                                </div>
+                                <div class="donation-amount">20€</div>
+                            </div>
+                            <div class="donation-item">
+                                <div class="donation-info">
+                                    <div class="donation-avatar">A</div>
+                                    <div>
+                                        <strong>Anonyme</strong>
+                                        <div class="donation-time">Il y a 5 jours</div>
+                                    </div>
+                                </div>
+                                <div class="donation-amount">40€</div>
+                            </div>
+                            <p style="text-align: center; margin-top: 20px; color: #666; font-style: italic;">
+                                🙏 Rejoignez-les et soutenez ces 22 jeunes basketteurs !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Un Établissement REP qui Vise l'Excellence</h2>
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <img src="./images/college.jpg" alt="Collège Gérard Philipe" style="max-width: 100%; height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </div>
+                <div class="objectives">
+                    <div class="container">
+                        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #666;">
+                            Le collège Gérard Philipe accueille une population issue des couches populaires de Fontaine. 
+                            La section sportive basket, créée en 2017, offre une perspective d'excellence par le sport.
+                        </p>
+                        <div class="objectives-grid">
+                            <div class="objective-card">
+                                <h3>🎯 Excellence Sportive</h3>
+                                <p>Seul collège du département à participer au championnat UNSS "Excellence". Promotion des valeurs essentielles : travail, solidarité, humilité.</p>
+                            </div>
+                            <div class="objective-card">
+                                <h3>📚 Réussite Scolaire</h3>
+                                <p>Équilibrer scolarité et pratique sportive de haut niveau</p>
+                            </div>
+                            <div class="objective-card">
+                                <h3>💪 Valorisation Féminine</h3>
+                                <p>Promouvoir la pratique sportive féminine dans des populations souvent exclues</p>
+                            </div>
+                            <div class="objective-card">
+                                <h3>🌟 Confiance et Autonomie</h3>
+                                <p>Développement de l'estime de soi et de l'autonomie par des actions où les élèves encadrent des élèves de primaire sur des ateliers basket</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Notre Équipe</h2>
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <img src="./images/equipe-basket.jpg" alt="Équipe de basket du collège" style="max-width: 100%; height: auto; max-height: 900px; object-fit: contain; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 20px; font-style: italic; color: #666;">Les 22 élèves de 4ème et 3ème de la section sportive basket</p>
+                </div>
+
+                <!-- Témoignages des élèves -->
+                <h3 style="text-align: center; color: #FF6B35; font-size: 1.8rem; margin: 40px 0 30px;">Ils racontent leur rêve</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Je n'ai jamais pris l'avion de ma vie. Aller à New York, c'est un rêve que je n'aurais jamais imaginé réaliser."
+                        </div>
+                        <div class="testimonial-author">— Inès, 14 ans</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Voir un match NBA en vrai, jouer avec des Américains... C'est une chance incroyable pour nous tous !"
+                        </div>
+                        <div class="testimonial-author">— Malik, 15 ans</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Ce voyage, c'est la preuve qu'on peut réussir de grandes choses quand on travaille ensemble."
+                        </div>
+                        <div class="testimonial-author">— Sarah, 14 ans</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Mes parents n'ont pas les moyens de m'offrir ça. Grâce à vous, je vais découvrir l'Amérique avec mes amis !"
+                        </div>
+                        <div class="testimonial-author">— Lucas, 13 ans</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Nos Échanges Précédents</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 40px 0;">
+                    <div style="text-align: center;">
+                        <img src="./images/echange-2014.JPG" alt="Échange 2014" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #FF6B35;">Échange 2014</h4>
+                        <p>Premier voyage, première découverte</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="./images/echange-2019.jpg" alt="Échange 2019" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #FF6B35;">Échange 2019</h4>
+                        <p>Renforcement des liens</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="./images/echange-2023.jpg" alt="Échange 2023" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #FF6B35;">Échange 2023</h4>
+                        <p>Une tradition qui perdure</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Programme du Séjour</h2>
+                <div class="activities">
+                    <div class="activity-card">
+                        <div class="activity-icon">🏫</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Immersion Scolaire</div>
+                            <p>Journée complète à la Middle School 318 de Brooklyn (Williamsburg) pour découvrir le système éducatif américain</p>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏀</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Échanges Sportifs</div>
+                            <p>Matchs amicaux, entraînements communs et tournois 3x3 avec les équipes locales</p>
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🎫</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Match NBA</div>
+                            <p>Assister à un match de la mythique ligue professionnelle américaine</p>
+                            <img src="./images/match-nba.jpg" alt="Match NBA" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🏆</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Match NCAA</div>
+                            <p>Un match de la conférence BIG12 lors de la March Madness. Vivre l'authenticité d'un match universitaire</p>
+                            <img src="./images/NCAA.jpg" alt="Match NCAA" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🗽</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Découverte Culturelle</div>
+                            <p>Empire State Building, Statue de la Liberté, Central Park, Metropolitan Museum</p>
+                            <img src="./images/new-york.jpg" alt="New York" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
+                        </div>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🌍</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Projet Migration</div>
+                            <p>Musée Ellis Island et entretiens avec les jeunes collégiens américains sur l'histoire de l'immigration</p>
+                            <img src="./images/ellis-island.jpg" alt="Ellis Island" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="budget">
+                    <div class="container">
+                        <h2 style="color: white;">Budget du Projet</h2>
+                        <div class="budget-highlight">1 800 €</div>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px;">Coût par élève</p>
+                        
+                        <div class="budget-details">
+                            <div class="budget-item">
+                                <h4>Billet d'avion</h4>
+                                <p>750 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Hébergement</h4>
+                                <p>400 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Matchs NBA-NCAA</h4>
+                                <p>200 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Visites culturelles</h4>
+                                <p>100 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Transports + transferts</h4>
+                                <p>80 €</p>
+                            </div>
+                            <div class="budget-item">
+                                <h4>Frais voyagiste</h4>
+                                <p>270 €</p>
+                            </div>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-top: 30px;">
+                            <strong>Participation des familles : 600 € par élève</strong><br>
+                            <em>Soit 13 200 € sur les 39 600 € nécessaires (coût total du voyage)</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Comment Nous Aider ?</h2>
+                <div class="objectives">
+                    <div class="container">
+                        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #666;">
+                            Trois façons de contribuer à la réalisation de ce rêve américain
+                        </p>
+                        <div class="objectives-grid">
+                            <div class="objective-card" style="border-left: 5px solid #28a745; background: linear-gradient(135deg, #f8f9fa, #e8f5e8);">
+                                <h3>💝 Particuliers - Don HelloAsso</h3>
+                                <p style="margin-bottom: 15px;"><strong>Plateforme 100% gratuite et sécurisée :</strong></p>
+                                <ul style="text-align: left; margin: 15px 0; padding-left: 20px; font-size: 0.9rem;">
+                                    <li>Aucune commission prélevée sur les dons</li>
+                                    <li>Paiement en ligne sécurisé</li>
+                                    <li>Reçus fiscaux automatiques</li>
+                                    <li>Support client dédié</li>
+                                    <li>Accès immédiat aux fonds</li>
+                                    <li>Contreparties possibles</li>
+                                </ul>
+                                <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button" style="margin-top: 15px; padding: 15px 30px; font-size: 1.1rem;">
+                                    💖 Faire un don HelloAsso
+                                </a>
+                            </div>
+                            
+                            <div class="objective-card" style="border-left: 5px solid #FF6B35;">
+                                <h3>🏢 Entreprises - Mécénat</h3>
+                                <p style="margin-bottom: 20px;">Devenez partenaire de notre projet et bénéficiez d'avantages fiscaux.</p>
+                                <p style="margin-bottom: 20px;"><strong>Réduction d'impôt de 60%</strong> sur le montant de votre don</p>
+                                <a href="mecenat.html" class="mecenat-button">
+                                    🏆 Découvrir les avantages du mécénat
+                                </a>
+                            </div>
+                            
+                            <div class="objective-card" style="border-left: 5px solid #667eea;">
+                                <h3>✈️ Voyages NBA - Hardwork Trip</h3>
+                                <p style="margin-bottom: 15px;"><strong>Notre partenaire voyagiste</strong> organise des voyages NBA depuis plus de 10 ans.</p>
+                                <p style="margin-bottom: 15px;"><strong>Principe :</strong> Pour chaque voyage acheté via notre section sportive, Hardwork Trip nous reverse 100€.</p>
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                                    <div style="text-align: center;">
+                                        <img src="https://raw.githubusercontent.com/spacieba/American-basketball-dream/main/images/trip1.jpg" alt="New York Trip 1" class="clickable-image" onclick="openModal('https://raw.githubusercontent.com/spacieba/American-basketball-dream/main/images/trip1.jpg')" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                        <p style="font-size: 0.9rem; font-weight: bold;">Trip 1 - Février 2026</p>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <img src="https://raw.githubusercontent.com/spacieba/American-basketball-dream/main/images/trip2.jpg" alt="New York Trip 2" class="clickable-image" onclick="openModal('https://raw.githubusercontent.com/spacieba/American-basketball-dream/main/images/trip2.jpg')" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                        <p style="font-size: 0.9rem; font-weight: bold;">Trip 2 - Mars 2026</p>
+                                    </div>
+                                </div>
+                                
+                                <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px; text-align: center;">⚠️ N'oubliez pas de cocher la case "Section sportive" dans le formulaire</p>
+                                <div style="text-align: center;">
+                                    <a href="https://hardworktrip.com/so/b1PbUnbEX?languageTag=fr&status=Draft&cid=00000000-0000-0000-0000-000000000000" class="cta-button" style="margin-top: 10px; padding: 12px 25px; font-size: 1rem;">
+                                        🏀 Voir les voyages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Questions Fréquentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Mon don est-il sécurisé ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, absolument ! Nous utilisons HelloAsso, plateforme certifiée et sécurisée utilisée par plus de 200 000 associations en France. Vos paiements sont protégés et vous recevez un reçu fiscal immédiatement.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Comment être sûr que l'argent servira au voyage ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Les fonds sont gérés par le FSE (Foyer Socio-Éducatif) du Collège Gérard Philipe, structure officielle et transparente. Un bilan financier complet sera publié après le voyage avec tous les justificatifs. Vous pouvez nous contacter à tout moment pour plus d'informations.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Puis-je donner sans carte bancaire ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui ! Vous pouvez envoyer un chèque à l'ordre du "FSE Collège Gérard Philipe" à l'adresse : 9 allée des Plans, 38600 Fontaine. Contactez-nous à dbouillac@gmail.com pour obtenir un reçu fiscal.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Puis-je suivre l'évolution du projet ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolument ! Nous mettons à jour régulièrement notre page avec les avancées du financement. Après le voyage, nous organiserons une soirée de restitution avec exposition photos et témoignages des élèves. Les donateurs seront invités en priorité !</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Les élèves sont-ils bien encadrés pendant le voyage ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui ! Le voyage sera encadré par 4 adultes : enseignants d'EPS et accompagnateurs expérimentés. Nous organisons ces échanges depuis 2014 et avons déjà réalisé 3 voyages à New York en toute sécurité (2014, 2019, 2023).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Que se passe-t-il si l'objectif n'est pas atteint ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Si l'objectif n'est pas atteint, nous adapterons le programme (hébergement moins coûteux, moins d'activités payantes) pour que le voyage ait quand même lieu. Ces jeunes méritent de vivre cette expérience ! Votre don sera utilisé dans tous les cas pour le projet.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Mon don est-il déductible des impôts ?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui ! Vous bénéficiez d'une réduction d'impôt de 66% du montant de votre don (particuliers) ou 60% (entreprises). Exemple : un don de 100€ ne vous coûte réellement que 34€ après déduction fiscale. Le reçu fiscal est envoyé automatiquement par HelloAsso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Financement Participatif</h2>
+                <div class="objectives">
+                    <div class="container">
+                        <p style="text-align: center; font-size: 1.3rem; margin-bottom: 20px; color: #FF6B35; font-weight: bold;">
+                            Nous espérons récolter 26 400 € pour rendre ce rêve possible
+                        </p>
+                        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #666;">
+                            <strong>26 400 € à financer</strong> grâce à vos dons et nos actions d'autofinancement (complément de la participation des familles)
+                        </p>
+                        <div class="objectives-grid">
+                            <div class="objective-card">
+                                <h3>🎪 Actions Élèves</h3>
+                                <p>Vide-grenier, vente de chocolats, calendriers, gâteaux, crêpes - Objectif : 5 000 €</p>
+                            </div>
+                            <div class="objective-card">
+                                <h3>🏢 Mécénat Privé</h3>
+                                <p>Partenariats avec entreprises locales et structures sportives</p>
+                            </div>
+                            <div class="objective-card">
+                                <h3>🏛️ Subventions Publiques</h3>
+                                <p>La ville de Fontaine et le département de l'Isère ont toujours été des soutiens précieux pour ces projets ambitieux. FSE, politique de la ville.</p>
+                            </div>
+                            <div class="objective-card" style="border-left: 5px solid #28a745; background: linear-gradient(135deg, #f8f9fa, #e8f5e8);">
+                                <h3>❤️ Dons Particuliers</h3>
+                                <p>Chaque don compte pour réaliser ce rêve américain !</p>
+                                <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button" style="margin-top: 15px; padding: 15px 30px; font-size: 1.1rem;">
+                                    💖 Faire un don maintenant
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Soutenez le Rêve de nos 22 Basketteurs !</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                Chaque euro compte pour réaliser ce projet exceptionnel d'ouverture culturelle et sportive
+            </p>
+            <a href="mailto:dbouillac@gmail.com" class="cta-button">💌 Nous Contacter</a>
+            <a href="https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream" class="donate-button">💰 Faire un Don</a>
+            <a href="mecenat.html" class="cta-button">🤝 Devenir Partenaire</a>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="container">
+            <h3>Contact du Projet</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>👨‍🏫</span>
+                    <div>
+                        <strong>Damien Bouillac</strong><br>
+                        Enseignant EPS - Responsable section basket
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <div>dbouillac@gmail.com</div>
+                </div>
+                <div class="contact-item">
+                    <span>🏫</span>
+                    <div>
+                        Collège Gérard Philipe<br>
+                        9 allée des Plans, 38600 Fontaine
+                    </div>
+                </div>
+            </div>
+            <div class="visitor-counter">
+                👁️ Visiteurs : <span id="visitorCount">...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pour les images en grand -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal()">&times;</button>
+            <img id="modalImage" src="" alt="Flyer en grand format">
+        </div>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" onclick="closeExitPopup()">&times;</button>
+            <h3>⏰ Attendez une seconde !</h3>
+            <p style="font-size: 1.2rem; color: #666; margin: 20px 0;">
+                Même <strong style="color: #FF6B35;">10€</strong> peuvent faire la différence pour ces 22 jeunes basketteurs.
+            </p>
+            <p style="color: #999; margin-bottom: 20px;">
+                🍔 10€ = 1 repas à New York<br>
+                🗽 20€ = Entrée musée pour 1 élève
+            </p>
+            <div class="exit-popup-buttons">
+                <button class="exit-popup-btn secondary" onclick="closeExitPopup()">Non merci</button>
+                <button class="exit-popup-btn primary" onclick="window.open('https://www.helloasso.com/associations/fse-college-gerard-philipe/collectes/american-basketball-dream', '_blank'); closeExitPopup();">
+                    💝 Je fais un don
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== COMPTEUR DE VISITES =====
+        function updateVisitorCount() {
+            const STORAGE_KEY = 'americanBBDream_visitors';
+            let visitorData = localStorage.getItem(STORAGE_KEY);
+
+            if (!visitorData) {
+                // Initialisation du compteur
+                visitorData = JSON.stringify({
+                    count: 1,
+                    lastVisit: new Date().toISOString()
+                });
+            } else {
+                const data = JSON.parse(visitorData);
+                const lastVisit = new Date(data.lastVisit);
+                const now = new Date();
+                const hoursSinceLastVisit = (now - lastVisit) / (1000 * 60 * 60);
+
+                // Incrémenter seulement si dernière visite > 1 heure
+                if (hoursSinceLastVisit > 1) {
+                    data.count++;
+                    data.lastVisit = now.toISOString();
+                    visitorData = JSON.stringify(data);
+                }
+            }
+
+            localStorage.setItem(STORAGE_KEY, visitorData);
+            const { count } = JSON.parse(visitorData);
+
+            // Afficher avec animation
+            const counterElement = document.getElementById('visitorCount');
+            counterElement.textContent = count.toLocaleString();
+        }
+
+        // ===== VARIABLES A MODIFIER POUR METTRE A JOUR LE COMPTEUR =====
+        const OBJECTIF = 26400;  // Objectif total en euros
+        const HELLOASSO = 120;   // Montant HelloAsso (sur objectif de 3000€)
+        const VIDE_GRENIER = 350;  // Vide grenier
+        const VENTES_EVENEMENTS = 900;  // Ventes crêpes/bonbons (Intersport, etc.)
+        const FSE = 440;         // Don FSE
+        // =================================================================
+
+        // Calcul automatique
+        const totalCollecte = HELLOASSO + VIDE_GRENIER + VENTES_EVENEMENTS + FSE;
+        const resteAColleter = OBJECTIF - totalCollecte;
+        const pourcentage = ((totalCollecte / OBJECTIF) * 100).toFixed(1);
+
+        // Calculer % HelloAsso sur son objectif de 3000€
+        const objetifHelloAsso = 3000;
+        const pourcentageHelloAsso = ((HELLOASSO / objetifHelloAsso) * 100).toFixed(1);
+
+        // Mise à jour automatique au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser le compteur de visites
+            updateVisitorCount();
+
+            // Mise à jour des montants
+            document.querySelector('.progress-amounts').innerHTML = `
+                <span><strong>${totalCollecte.toLocaleString()} € collectés</strong></span>
+                <span><strong>Objectif : ${OBJECTIF.toLocaleString()} €</strong></span>
+            `;
+            
+            // Mise à jour du pourcentage et de la barre
+            document.querySelector('.progress-percentage').textContent = pourcentage + '%';
+            document.querySelector('.progress-bar').style.width = pourcentage + '%';
+            
+            // Mise à jour du montant restant
+            document.querySelector('.progress-section p strong').textContent = 
+                `Il manque encore ${resteAColleter.toLocaleString()} € pour réaliser ce rêve !`;
+            
+            // Mise à jour des statistiques détaillées
+            const stats = document.querySelectorAll('.progress-stat-number');
+            stats[0].textContent = HELLOASSO + ' € (' + pourcentageHelloAsso + '% de 3000€)';
+            stats[1].textContent = VIDE_GRENIER + ' €';
+            stats[2].textContent = VENTES_EVENEMENTS + ' €';
+            stats[3].textContent = FSE + ' €';
+            stats[4].textContent = resteAColleter.toLocaleString() + ' €';
+        });
+
+        // Modal functions
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer le modal avec la touche Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec animation
+        document.querySelectorAll('.stat-card, .objective-card, .activity-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Animation du compteur
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Déclencher l'animation des compteurs
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.textContent);
+                    animateCounter(entry.target, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        statNumbers.forEach(stat => statsObserver.observe(stat));
+
+        // ===== COMPTE À REBOURS =====
+        function updateCountdown() {
+            const departureDate = new Date('2026-03-09T00:00:00');
+            const now = new Date();
+            const diff = departureDate - now;
+
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('countdown').innerHTML = '<p style="font-size: 1.5rem;">🎉 Le voyage a commencé !</p>';
+            }
+        }
+
+        // Mettre à jour le compte à rebours chaque seconde
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // ===== FAQ ACCORDION =====
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+
+                // Fermer toutes les autres FAQ
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+
+                // Ouvrir/fermer la FAQ cliquée
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // ===== EXIT INTENT POPUP =====
+        let exitPopupShown = false;
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('active');
+            exitPopupShown = true;
+            localStorage.setItem('exitPopupShown', 'true');
+        }
+
+        // Détecter quand la souris quitte la page vers le haut
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 10 && !exitPopupShown && !localStorage.getItem('exitPopupShown')) {
+                document.getElementById('exitPopup').classList.add('active');
+                exitPopupShown = true;
+            }
+        });
+
+        // Fermer le popup en cliquant en dehors
+        document.getElementById('exitPopup').addEventListener('click', (e) => {
+            if (e.target.id === 'exitPopup') {
+                closeExitPopup();
+            }
+        });
+    </script>
+</body>
+</html>
