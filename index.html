@@ -35,6 +35,62 @@
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow-x: hidden;
+        }
+
+        /* Décoration de Noël - Flocons de neige */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            color: white;
+            font-size: 1.5rem;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-20px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        .snowflake:nth-child(1) { left: 5%; animation-duration: 8s; animation-delay: 0s; font-size: 1.2rem; }
+        .snowflake:nth-child(2) { left: 15%; animation-duration: 12s; animation-delay: 1s; font-size: 1.8rem; }
+        .snowflake:nth-child(3) { left: 25%; animation-duration: 10s; animation-delay: 2s; font-size: 1rem; }
+        .snowflake:nth-child(4) { left: 35%; animation-duration: 14s; animation-delay: 0.5s; font-size: 1.5rem; }
+        .snowflake:nth-child(5) { left: 45%; animation-duration: 9s; animation-delay: 3s; font-size: 2rem; }
+        .snowflake:nth-child(6) { left: 55%; animation-duration: 11s; animation-delay: 1.5s; font-size: 1.3rem; }
+        .snowflake:nth-child(7) { left: 65%; animation-duration: 13s; animation-delay: 2.5s; font-size: 1.7rem; }
+        .snowflake:nth-child(8) { left: 75%; animation-duration: 10s; animation-delay: 0.8s; font-size: 1.1rem; }
+        .snowflake:nth-child(9) { left: 85%; animation-duration: 15s; animation-delay: 3.5s; font-size: 1.9rem; }
+        .snowflake:nth-child(10) { left: 95%; animation-duration: 8s; animation-delay: 2s; font-size: 1.4rem; }
+
+        /* Bandeau de Noël */
+        .christmas-banner {
+            background: linear-gradient(90deg, #c41e3a, #165B33, #c41e3a);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 100;
         }
 
         .container {
@@ -981,6 +1037,25 @@
     </style>
 </head>
 <body>
+    <!-- Flocons de neige -->
+    <div class="snowflakes">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+    </div>
+
+    <!-- Bandeau de Noël -->
+    <div class="christmas-banner">
+        🎄 Joyeuses Fêtes ! Offrez un cadeau qui a du sens : soutenez nos jeunes basketteurs ! 🎁🏀
+    </div>
+
     <div class="hero">
         <div class="hero-header">
             <a href="mecenat.html" class="header-entreprise-btn">
@@ -1109,24 +1184,24 @@
                                 <strong>Objectif : 26 400 €</strong>
                             </div>
                             <div style="font-size: 2.5rem; font-weight: bold; color: #28a745; margin-bottom: 20px;">
-                                1 810 € collectés
+                                4 444 € collectés
                             </div>
                             <div style="font-size: 1.1rem; color: #666;">
-                                Il manque encore <strong>24 590 €</strong> pour réaliser ce rêve !
+                                Il manque encore <strong>21 956 €</strong> pour réaliser ce rêve !
                             </div>
                         </div>
 
                         <!-- Barre de progression -->
                         <div class="progress-container">
-                            <div class="progress-bar" style="width: 6.9%;">
-                                <div class="progress-percentage">6.9%</div>
+                            <div class="progress-bar" style="width: 16.8%;">
+                                <div class="progress-percentage">16.8%</div>
                             </div>
                         </div>
 
                         <!-- Détails des collectes (en plus petit) -->
                         <div class="progress-stats" style="margin-top: 40px;">
                             <div class="progress-stat">
-                                <span class="progress-stat-number" style="font-size: 1.3rem;">120 €</span>
+                                <span class="progress-stat-number" style="font-size: 1.3rem;">554 €</span>
                                 <div class="progress-stat-label" style="font-size: 0.85rem;">Dons HelloAsso</div>
                             </div>
                             <div class="progress-stat">
@@ -1134,12 +1209,24 @@
                                 <div class="progress-stat-label" style="font-size: 0.85rem;">Vide grenier</div>
                             </div>
                             <div class="progress-stat">
-                                <span class="progress-stat-number" style="font-size: 1.3rem;">900 €</span>
+                                <span class="progress-stat-number" style="font-size: 1.3rem;">1 400 €</span>
                                 <div class="progress-stat-label" style="font-size: 0.85rem;">Ventes crêpes/bonbons</div>
                             </div>
                             <div class="progress-stat">
                                 <span class="progress-stat-number" style="font-size: 1.3rem;">440 €</span>
                                 <div class="progress-stat-label" style="font-size: 0.85rem;">Don du FSE</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number" style="font-size: 1.3rem;">500 €</span>
+                                <div class="progress-stat-label" style="font-size: 0.85rem;">Calendriers</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number" style="font-size: 1.3rem;">200 €</span>
+                                <div class="progress-stat-label" style="font-size: 0.85rem;">Tombola</div>
+                            </div>
+                            <div class="progress-stat">
+                                <span class="progress-stat-number" style="font-size: 1.3rem;">1 000 €</span>
+                                <div class="progress-stat-label" style="font-size: 0.85rem;">Aide du département</div>
                             </div>
                         </div>
 
@@ -1632,14 +1719,17 @@
 
         // ===== VARIABLES A MODIFIER POUR METTRE A JOUR LE COMPTEUR =====
         const OBJECTIF = 26400;  // Objectif total en euros
-        const HELLOASSO = 120;   // Montant HelloAsso (sur objectif de 3000€)
+        const HELLOASSO = 554;   // Montant HelloAsso (sur objectif de 3000€)
         const VIDE_GRENIER = 350;  // Vide grenier
-        const VENTES_EVENEMENTS = 900;  // Ventes crêpes/bonbons (Intersport, etc.)
+        const VENTES_EVENEMENTS = 1400;  // Ventes crêpes/bonbons (Intersport, etc.)
         const FSE = 440;         // Don FSE
+        const CALENDRIERS = 500; // Vente de calendriers
+        const TOMBOLA = 200;     // Tombola
+        const AIDE_DEPARTEMENT = 1000; // Aide du département
         // =================================================================
 
         // Calcul automatique
-        const totalCollecte = HELLOASSO + VIDE_GRENIER + VENTES_EVENEMENTS + FSE;
+        const totalCollecte = HELLOASSO + VIDE_GRENIER + VENTES_EVENEMENTS + FSE + CALENDRIERS + TOMBOLA + AIDE_DEPARTEMENT;
         const resteAColleter = OBJECTIF - totalCollecte;
         const pourcentage = ((totalCollecte / OBJECTIF) * 100).toFixed(1);
 
@@ -1670,9 +1760,11 @@
             const stats = document.querySelectorAll('.progress-stat-number');
             stats[0].textContent = HELLOASSO + ' € (' + pourcentageHelloAsso + '% de 3000€)';
             stats[1].textContent = VIDE_GRENIER + ' €';
-            stats[2].textContent = VENTES_EVENEMENTS + ' €';
+            stats[2].textContent = VENTES_EVENEMENTS.toLocaleString() + ' €';
             stats[3].textContent = FSE + ' €';
-            stats[4].textContent = resteAColleter.toLocaleString() + ' €';
+            stats[4].textContent = CALENDRIERS + ' €';
+            stats[5].textContent = TOMBOLA + ' €';
+            stats[6].textContent = AIDE_DEPARTEMENT.toLocaleString() + ' €';
         });
 
         // Modal functions
