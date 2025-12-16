@@ -1757,37 +1757,39 @@
     </div>
 
     <script>
-        // ===== COMPTEUR DE VISITES =====
+        // ===== COMPTEUR DE VISITES PARTAGÉ =====
         function updateVisitorCount() {
-            const STORAGE_KEY = 'americanBBDream_visitors';
-            let visitorData = localStorage.getItem(STORAGE_KEY);
-
-            if (!visitorData) {
-                // Initialisation du compteur
-                visitorData = JSON.stringify({
-                    count: 1,
-                    lastVisit: new Date().toISOString()
-                });
-            } else {
-                const data = JSON.parse(visitorData);
-                const lastVisit = new Date(data.lastVisit);
-                const now = new Date();
-                const hoursSinceLastVisit = (now - lastVisit) / (1000 * 60 * 60);
-
-                // Incrémenter seulement si dernière visite > 1 heure
-                if (hoursSinceLastVisit > 1) {
-                    data.count++;
-                    data.lastVisit = now.toISOString();
-                    visitorData = JSON.stringify(data);
-                }
-            }
-
-            localStorage.setItem(STORAGE_KEY, visitorData);
-            const { count } = JSON.parse(visitorData);
-
-            // Afficher avec animation
             const counterElement = document.getElementById('visitorCount');
-            counterElement.textContent = count.toLocaleString();
+            const VISITED_KEY = 'abd_visited';
+            const wasVisited = sessionStorage.getItem(VISITED_KEY);
+
+            // Utiliser CountAPI pour un compteur partagé
+            const namespace = 'american-basketball-dream';
+            const key = 'visits';
+
+            if (!wasVisited) {
+                // Nouvelle visite : incrémenter le compteur
+                fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        counterElement.textContent = data.value.toLocaleString();
+                        sessionStorage.setItem(VISITED_KEY, 'true');
+                    })
+                    .catch(() => {
+                        // Fallback si l'API ne répond pas
+                        counterElement.textContent = '500+';
+                    });
+            } else {
+                // Déjà visité dans cette session : juste récupérer le compteur
+                fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        counterElement.textContent = data.value.toLocaleString();
+                    })
+                    .catch(() => {
+                        counterElement.textContent = '500+';
+                    });
+            }
         }
 
         // ===== VARIABLES A MODIFIER POUR METTRE A JOUR LE COMPTEUR =====
